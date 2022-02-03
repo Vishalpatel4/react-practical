@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import Nav from "../layout/Nav";
+import App from "../layout/App";
 
-function index() {
+const Index = () => {
+
+  const [listData, setListData] = useState([]);
+
+  const onSubmit = (e) => {
+    const text = e.target.value
+    text = document.getElementById("task_input").value
+    console.log(text)
+  }
   return (
-    <div className='container text-center'>
-      <h1>Welcome The Dashboad!</h1>
-    </div>
+    <>
+      <Nav />
+      <App />
+    </>
   );
 }
 
-export default index;
+export default Index;
